@@ -1,0 +1,585 @@
+/* ======General styles=========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+
+    --primary-text-color: #181820;
+    --secondary-text-color: #5c5c62;
+    --durability-text-color: #6a737d9c;
+    --icon-color: #6a737d;
+    --border-color: #ff9a0045;
+    --text-decoration-color: #ff9a00;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 30px;
+    max-width: 900px;
+}
+
+
+
+.fh {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.fv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resume {
+    margin: 50px auto;
+    border: 1px solid #f5f5f5;
+    box-shadow: 1px 1px 7px 7px #f5f5f5;
+    padding: 30px 0;
+    max-width: 900px;
+}
+
+.resume__block {
+    border-bottom: 3px solid var(--border-color);
+    padding-bottom: 30px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .main-info,
+    .contact_info_container {
+        flex-direction: column;
+    }
+
+    .contact_info_container {
+        align-items: center;
+    }
+
+    .contact-info__block:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .experiences {
+        margin-right: 0;
+    }
+}
+
+/* =========Contact info styles============= */
+
+.contact-info__header,
+.contact-info__sub-header {
+    text-align: center;
+}
+
+.contact-info__header {
+    color: var(--primary-text-color);
+    margin-bottom: 15px;
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+}
+
+.contact-info__sub-header {
+    color: var(--secondary-text-color);
+    margin-bottom: 30px;
+}
+
+.contact-info__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-info__block--center {
+    justify-content: center;
+}
+
+.contact-info__item {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+}
+
+.contact-info__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.contact-info__item-icon-wrapper {
+    margin-right: 10px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-info__item-icon path {
+    fill: var(--icon-color);
+}
+
+.contact-info__item-icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+}
+
+.contact-info__avatar {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid;
+    border-color: var(--text-decoration-color);
+}
+
+/* =============Intro and skills styles================= */
+
+.intro {
+    display: flex;
+    justify-content: start;
+}
+
+.intro__icon-wrapper {
+    margin-right: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.intro__icon {
+    height: 1.1428rem;
+    vertical-align: text-bottom;
+}
+
+.intro__icon path {
+    fill: var(--text-decoration-color);
+}
+
+.intro_text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+.skills__header {
+    color: var(--secondary-text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.skills__text {
+    color: var(--secondary-text-color);
+    text-align: justify;
+}
+
+/* ==============Experience and additional info styles========= */
+
+.experiences {
+    flex: 1 1 60%;
+    margin-right: 50px;
+}
+
+.experiences__header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experiences__company-header-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.experiences__company-header-name {
+    color: var(--primary-text-color);
+    text-decoration-color: var(--text-decoration-color);
+    text-decoration-line: underline;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.experiences__company-project {
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.experiences__company-project-role {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.experiences__company-project-name {
+    color: var(--primary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.experiences__company-project-responsibilities {
+    color: var(--secondary-text-color);
+    padding-left: 20px;
+}
+
+.additional-info {
+    flex: 1 1 40%;
+}
+
+.additional-info__education {
+    margin-bottom: 20px;
+}
+
+.additional-info__education-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__education-university-durability {
+    color: var(--durability-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.additional-info__education-university-speciality {
+    color: var(--primary-text-color);
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.additional-info__education-university-name {
+    color: var(--secondary-text-color);
+}
+
+.additional-info__languages {
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.additional-info__languages-item {
+    color: var(--secondary-text-color);
+}
+
+
+/* ==========My styles================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100vW;
+    padding: 10px 20px;
+    background-color: #26262e50;
+}
+
+.header_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    color: #dad8d1;
+    font-style: italic;
+}
+
+.navigation {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation_list {
+    display: flex;
+}
+
+.navigation_item  {
+    margin-right: 15px;
+}
+
+.navigation_link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e9d07d;
+}
+.navigation_link:hover,
+.navigation_link:focus {
+    text-decoration: underline;
+}
+
+main {
+    padding-top: 0;
+    background-color: #2b2b30;
+    color: #fff;
+}
+
+.section.first {
+    padding-top: 80px;
+}
+
+.section {
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.home_thumb {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home_thumb .image_thumb {
+    height: 350px;
+}
+
+.name_box {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+}
+
+.greetings {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #dad8d1;
+}
+
+.name {
+    font-size: 36px;
+    font-weight: 600;
+    text-align: end;
+    margin-bottom: 20px;
+    color: #e9d07d;
+}
+
+.profession {
+    font-size: 26px;
+    font-weight: 300;
+    text-align: end;
+    margin-bottom: 20px;
+    color: #e9d07d;
+}
+
+.image_thumb {
+    border-radius: 25px;
+    overflow: hidden;
+    max-width: 300px;
+    height: 200px;
+}
+
+/* ===About section====== */
+
+.section.second {
+    background-color: #4a4a9648;
+}
+
+.about_box {
+    padding: 0 30px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    font-style: oblique;
+}
+
+h3.title {
+    font-size: 18px;
+}
+
+.text {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.link_to_CV {
+    width: 130px;
+    height: 40px;
+    border: solid 2px #e9d07d;
+    border-radius: 10px;
+    display: inline-block;
+    color: #f5f5f5;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.link_to_CV:hover,
+.link_to_CV:focus {
+    background-color: #e9d07d;
+    color: #181820;
+    font-weight: 600;
+}
+
+.duration {
+    font-weight: 600;
+}
+
+.education_item {
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    background-color: #498299a9;
+}
+
+.education_item:last-child {
+    background-color: #749949a9;
+}
+
+/* =====Portfolio ======== */
+
+.portfolio_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio_item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 15px;
+}
+
+a .image_thumb:hover,
+a .image_thumb:focus {
+    border: solid 3px #e9c77d;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.site_link {
+    margin-top: 10px;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.site_link:hover,
+.site_link:focus {
+    text-decoration: underline;
+}
+
+.code_link {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10px;
+    color: #dad8d1;
+}
+
+.code_link:hover,
+.code_link:focus {
+    text-decoration: underline;
+}
+
+.code_link:last-child {
+    margin-right: 0;
+}
+
+.links_wraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.last {
+    padding-bottom: 100px;
+    background-color: #498299a9;
+}
+
+.contacts_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.concontacts_list {
+    margin-bottom: 15px;
+}
+
+.contacts_item span {
+    color: #181820;
+}
+
+.contacts_item .contact-info__item-icon path {
+    fill: #dad8d1;
+}
+
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.social__item + .social__item {
+  margin-left: 10px;
+}
+
+.social__link {
+  text-decoration: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--icon-color);
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social__link:hover,
+.social__link:focus {
+    background-color: var(--button-color);
+    color: var(--icon-hover-color);
+}
+
+.social__icon {
+  fill: currentColor;
+}
